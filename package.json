@@ -1,6 +1,6 @@
 {
   "name": "wct-xunit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "WCT plugin that uses the mocha xunit reporter",
   "main": "plugin.js",
   "license": "MIT",
