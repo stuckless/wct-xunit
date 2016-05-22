@@ -1,6 +1,6 @@
 {
   "name": "wct-xunit",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "WCT plugin that uses the mocha xunit reporter",
   "main": "plugin.js",
   "license": "MIT",
@@ -12,6 +12,7 @@
     "cli-options": {}
   },
   "dependencies": {
+    "lodash": "^4.12.0",
     "mocha": "^2.4.5"
   }
 }
