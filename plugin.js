@@ -89,7 +89,7 @@ module.exports = function(wct, pluginOptions, plugin) {
             title: test.test[test.test.length - 1],
             state: getState(test.state),
             // map to a boolean value
-            pending: (test.state === 'pending'),
+            isPending: function() {return test.state === 'pending'},
             duration: test.duration,
             err: test.err
         });
