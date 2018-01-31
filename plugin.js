@@ -76,6 +76,7 @@ module.exports = function(wct, pluginOptions, plugin) {
         } else if (test.state === 'failing') {
             reporter.stats.failures++;
         }
+        //console.log(JSON.stringify(test.error));
         // adapt call to match reporters expected test structure
         reporter.tests.push({
             parent: {
@@ -91,7 +92,11 @@ module.exports = function(wct, pluginOptions, plugin) {
             // map to a boolean value
             isPending: function() {return test.state === 'pending'},
             duration: test.duration,
-            err: test.err || {
+            err: test.err || test.error || {
+                message: test.test[test.test.length - 1],
+                stack: null
+            },
+            error: test.err || test.error || {
                 message: test.test[test.test.length - 1],
                 stack: null
             }
